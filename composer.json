@@ -1,5 +1,5 @@
 {
-    "name": "paulhenri-l/apm-event",
+    "name": "paulhenri-l/apm-events",
     "description": "APM Events for APM event producers",
     "type": "library",
     "license": "proprietary",
