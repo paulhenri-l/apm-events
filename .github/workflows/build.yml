@@ -16,9 +16,11 @@ jobs:
 
       - name: Install Protoc
         run: |
+          mkdir /tmp/protobuf
+          cd /tmp/protobuf
           wget https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-linux-x86_64.zip
           unzip protoc-3.13.0-linux-x86_64.zip
-          mv protoc-3.13.0-linux-x86_64/bin/protoc /usr/bin
+          mv bin/protoc /usr/bin
 
       - name: Compile
         run: protoc --proto_path=src --php_out=$(pwd) src/*
