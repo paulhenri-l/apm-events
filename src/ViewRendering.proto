@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package PaulhenriL.APMEvents;
+option php_metadata_namespace = "PaulhenriL\\APMEvents\\Metadata";
+
+message ViewRender {
+  string id = 1;
+  string batch_id = 2;
+}

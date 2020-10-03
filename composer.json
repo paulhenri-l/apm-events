@@ -1,0 +1,20 @@
+{
+    "name": "paulhenri-l/apm-event",
+    "description": "APM Events for APM event producers",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Paul-Henri Leobon",
+            "email": "25308170+paulhenri-l@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "google/protobuf": "^3.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "PaulhenriL\\APMEvents\\": "PaulhenriL\\APMEvents"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  compile:
+    name: Compile protocols
+    runs-on: ${{ matrix.operating-system }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Install Protoc
+        run: apt install -y protobuf-compiler
+
+      - name: Compile
+        run: protoc --proto_path=src --php_out=$(pwd) src/*
+
+      - name: Commit
+        uses: github-actions-x/commit@v2.7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: master
+          commit-message: Protocols recompiled
+          files: PaulhenriL/*
+          name: paulhenri-l
+          email: 25308170+paulhenri-l@users.noreply.github.com
