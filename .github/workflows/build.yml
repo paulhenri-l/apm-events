@@ -21,7 +21,7 @@ jobs:
           wget https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-linux-x86_64.zip
           unzip protoc-3.13.0-linux-x86_64.zip
           sudo mv bin/protoc /usr/bin
-          sudo chmod+x /usr/bin/protoc
+          sudo chmod +x /usr/bin/protoc
 
       - name: Compile
         run: protoc --proto_path=src --php_out=$(pwd) src/*
