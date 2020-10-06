@@ -24,7 +24,9 @@ jobs:
           sudo chmod +x /usr/bin/protoc
 
       - name: Compile
-        run: protoc --proto_path=src --php_out=$(pwd) src/*
+        run: |
+          rm -rf PaulhenriL
+          protoc --proto_path=src --php_out=$(pwd) src/*
 
       - name: Commit
         uses: github-actions-x/commit@v2.7

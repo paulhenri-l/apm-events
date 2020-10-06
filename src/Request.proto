@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package PaulhenriL.APMEvents;
+option php_metadata_namespace = "PaulhenriL\\APMEvents\\Metadata";
+
+message Request {
+  string type = 1;
+  string timestamp = 2;
+  string url = 3;
+  string path = 4;
+  string method = 5;
+  uint32 status = 6;
+  string servername = 7;
+  float duration = 8;
+  string memory_peak_usage = 9;
+}
